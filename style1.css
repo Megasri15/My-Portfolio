@@ -1,0 +1,161 @@
+body {
+  height: 100vh; /* full viewport height */
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(to right, #345c72 50%, #f6f6e9 50%);
+  color: white;
+  
+}
+
+
+
+/* Circular photo with glowing border */
+.profile-pic {
+  position: absolute;
+  top:150px;
+  right: 300px;
+  width: 190px;
+  height: 180px;
+  overflow: hidden;
+  margin: 0 auto;
+  border: 4px solid  #345c72;
+  box-shadow: 0 0 25px rgba(52, 92, 114, 0.5);
+  animation: glow 1s infinite alternate;
+}
+
+@keyframes glow {
+  0% { box-shadow: 0 0 25px rgba(52, 92, 114, 1); }
+  100% { box-shadow: 0 0 60px rgba(52, 92, 114, 0.8); }
+}
+
+.profile-pic img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+/* ===== Slide-up animation for entrance ===== */
+@keyframes slideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.left,
+.profile-pic,
+.right,
+.bottom-icons,
+.portfolio-btn {
+  opacity: 0;
+  transform: translateY(40px);
+  animation: slideUp 1s ease-out forwards;
+}
+.left {animtion-delay: 0s}
+.profile-pic { animation-delay: 0s; }
+.right { animation-delay: 0s; }
+.bottom-icons { animation-delay: 0s;}
+.portfolio-btn { animation-delay: 0s; }
+
+.right h1 {
+  text-align: right;
+  padding-right: 100px;
+  position: relative;
+  top: 350px;
+  right:215px;
+  margin-top: 20px;
+  color: black;
+  font-size: 1.8em;
+  
+}
+
+.left {
+  position: absolute;   /* so we can place it on left */
+  left: 0;
+  top: 0;
+  width: 50%;           /* gray-green half */
+  height: 100vh;
+  background: #345c72;  /* optional, already in gradient */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 100px;   /* inner spacing from left */
+  box-sizing: border-box;
+}
+
+.left h2{
+  width:90%;
+  text-align: left;
+  font-size: 1.6em;
+  font-family: "TT Marxiana Antigua", Arsenal;
+  color: white;
+  padding bottom:10px;
+ 
+}
+.left p {
+  width: 90%;            /* limit paragraph width inside gray-green area */
+  max-width: 500px;      /* optional fixed maximum width */
+  text-align: left;
+  line-height: 1.8;
+  font-size: 1.1em;
+  font-family: "Times New Roman";
+  color: white;
+  padding-bottom: 50px;
+
+ 
+}
+
+
+/* Animated portfolio button */
+/* Animated portfolio button */
+.portfolio-btn {
+  margin-top: 40px;
+  padding: 12px 28px;
+  width: 180px;
+  height: 50px;
+  background: #343839;
+  border: 2px solid #343434;   /* light green border */
+  color: #f6f6e9;              /* light green text */
+  font-size: 1.1em;
+  border-radius: 25px;
+  cursor: pointer;
+
+}
+/* Slight lift when hovered or touched */
+.portfolio-btn:hover {
+  transform: translateY(-3px); /* move upward */
+}
+
+/* Optional: subtle press-down when clicked */
+.portfolio-btn:active {
+  transform: translateY(-3px) scale(0.98);
+}
+.portfolio-btn {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+.portfolio-btn:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+}
+/* bottom-right icons */
+.bottom-icons {
+  position: absolute;
+  bottom: 150px;
+  right: 325px;
+}
+
+.icon {
+  margin-left: 15px;
+  font-size: 35px;
+  color: black;
+  text-decoration: none;
+
+}
+
+.icon:hover {
+  transform: scale(1.2);
+  color: #345c72;
+}
+
