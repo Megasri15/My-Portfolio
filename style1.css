@@ -158,6 +158,57 @@ body {
   transform: scale(1.2);
   color: #345c72;
 }
+/* ====== RESPONSIVE DESIGN FOR SMARTPHONES ====== */
+@media (max-width: 768px) {
+
+  body {
+    background: linear-gradient(to bottom, #f6f6e9 60%, #7d9b76 40%);
+  }
+
+  .container {
+    flex-direction: column-reverse; /* stack About first, then photo/name */
+    padding: 20px;
+  }
+
+  .left, .right, .profile-pic {
+    flex: none;
+    width: 100%;
+    text-align: center;
+  }
+
+  .left {
+    order: 1; /* about section first */
+    background-color: #7d9b76;
+    border-radius: 10px;
+    padding: 20px;
+  }
+
+  .right {
+    order: 2; /* name next */
+    margin-top: 15px;
+  }
+
+  .profile-pic {
+    order: 3; /* photo last */
+    margin-top: 10px;
+  }
+
+  .profile-pic img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .bottom-icons {
+    position: static;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .bottom-icons .icon {
+    color: white;
+  }
+}
+
 
 
 
