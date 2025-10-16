@@ -91,7 +91,6 @@ body {
   font-size: 1.6em;
   font-family: "TT Marxiana Antigua", Arsenal;
   color: white;
-  padding bottom:10px;
  
 }
 .left p {
@@ -142,13 +141,13 @@ body {
 /* bottom-right icons */
 .bottom-icons {
   position: absolute;
+  margin-top: 20px;
   bottom: 150px;
   right: 325px;
 }
 
 .icon {
   margin-left: 15px;
-  margin-top: 20px;
   font-size: 35px;
   color: black;
   text-decoration: none;
@@ -209,6 +208,7 @@ body {
     color: white;
   }
 }
+
 
 
 
